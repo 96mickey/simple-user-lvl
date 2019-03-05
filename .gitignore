@@ -1,0 +1,4 @@
+#Node modules
+node_modules
+
+#Logs and Configs have their own gitignore so don't add them here
