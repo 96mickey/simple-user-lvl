@@ -24,7 +24,7 @@ type could be of 4 types, namely
 
 Password will be generated on server and will be sent as response. In production, it should be sent on email.
 
-Expected JSON for signup 
+Expected JSON for signup, 
 send a `POST` request at 
 
 http://localhost:3005/api/user/register
@@ -36,7 +36,7 @@ http://localhost:3005/api/user/register
 }
 ```
 
-Use this password to sign in to this system.
+Use this password to sign in to this system,
 send a `POST` request at
 
 http://localhost:3005/api/user/login
