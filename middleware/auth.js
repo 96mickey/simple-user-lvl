@@ -4,7 +4,7 @@ const { User } = require("../models/user");
 
 const auth = (req, res, next) => {
   const token = req.header("x-auth-token");
-  if (!token) return res.status(401).send("Access denied. No token found.");
+  if (!token) return res.status(401).failure("Access denied. No token found.");
 
   try {
     const decoded = jwt.verify(token, config.get("secret"));
@@ -17,24 +17,25 @@ const auth = (req, res, next) => {
 
 const superadminAuth = (req, res, next) => {
   if (req.user.type !== "superadmin")
-    return res.status(401).send("Access denied.");
+    return res.status(401).failure("Access denied.");
   next();
 };
 
 const adminAuth = (req, res, next) => {
-  if (req.user.type !== "admin") return res.status(401).send("Access denied.");
+  if (req.user.type !== "admin")
+    return res.status(401).failure("Access denied.");
   next();
 };
 
 const teacherAuth = (req, res, next) => {
   if (req.user.type !== "teacher")
-    return res.status(401).send("Access denied.");
+    return res.status(401).failure("Access denied.");
   next();
 };
 
 const studentAuth = (req, res, next) => {
   if (req.user.type !== "student")
-    return res.status(401).send("Access denied.");
+    return res.status(401).failure("Access denied.");
   next();
 };
 
