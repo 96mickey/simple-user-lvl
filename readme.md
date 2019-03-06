@@ -4,7 +4,7 @@ In the "config" folder put the following in default.json
 
 ```json
 {
-  "dbUrl": "mongodb://localhost/rewards",
+  "dbUrl": "mongodb://localhost/userlvl",
   "secret": "shhh"
 }
 ```
