@@ -54,8 +54,11 @@ There are four routes to explore.
 send a `GET` request at 
 
 http://localhost:3005/api/user/teacher  
+
 http://localhost:3005/api/user/student  
+
 http://localhost:3005/api/user/admin  
+
 http://localhost:3005/api/user/superadmin
 
 
